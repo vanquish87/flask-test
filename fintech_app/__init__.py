@@ -1,5 +1,5 @@
 from flask import Flask
-# from flask.ext.sqlalchemy import SQLAlchemy 
+from flask.ext.sqlalchemy import SQLAlchemy 
 
 # to use Migrate library to update databases & tables
 # from flask.ext.migrate import Migrate
@@ -17,7 +17,7 @@ app.config.from_object('settings')
 
 
 # # create a object of SQLAlchemy with passing app as argument through it
-# db = SQLAlchemy(app)
+db = SQLAlchemy(app)
 
 # # migrations
 # migrate = Migrate(app, db)
@@ -29,7 +29,7 @@ app.config.from_object('settings')
 
 # views are controller (which has to route) in flask in MVC Pattern
 from website import views
-# from user import views
+from user import views
 
 # # for saving n updating isd_codes into database
 # if app.config["MIGRATION"] == True:
