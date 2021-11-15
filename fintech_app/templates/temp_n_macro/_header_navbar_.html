@@ -1,0 +1,26 @@
+<!----this is for rendering a base template in flask using jinja templating-->
+{% extends "temp-n-macro/_head_.html" %}
+
+{% block meta_og_tags_title %}{% endblock %}
+
+{% block custom_css_files %}{% endblock %}
+
+{% block header_navbar %}
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-sm navbar-light bg-white p-2">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="static/images/pages/top-logo.png" class="img-fluid" title="ValueGuyz" alt="ValueGuyz">
+            </a>
+            <button class="btn btn-outline-info btn-sm px-4" type="submit">Login</button>
+        </div>
+    </nav>
+
+    
+{% endblock %}
+  
+<!----Declarations for blocks of html code to be rendered later -->
+{% block content %}{% endblock %}   
+{% block footer %} {% endblock %}

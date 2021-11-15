@@ -1,0 +1,23 @@
+<!----this is for rendering a base template in flask using jinja templating-->
+{% extends "temp-n-macro/_header_navbar_.html" %}
+        
+<!----Declaration for block of html code to be rendered later -->    
+
+{% block meta_og_tags_title %}{% endblock %}
+
+{% block custom_css_files %}{% endblock %}
+
+{% block content %}{% endblock %}
+
+{% block footer %}
+
+<footer>
+    {% include "temp-n-macro/_flashed-message.html" %}  
+    <!-- Bootstrap JavaScript plugin and dependency with this bundle -->
+    <!-- this version doesn't need jquery for bootstrap to work properly. Hooray! -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</footer>
+
+</html>
+
+{% endblock %}
