@@ -7,8 +7,8 @@ from flask_wtf import Form
 from wtforms import validators, StringField, PasswordField, TextAreaField, SelectField
 
 # for validating a mobile no with otp, emailid
-from flask_wtf.html5 import EmailField, IntegerRangeField, TelField
-
+from wtforms.fields.html5 import EmailField, IntegerRangeField, TelField
+# flask_wtf.html5 is deprecated. Import directly from wtforms.fields.html5. 
 
 class RegisterForm_user_temp(Form):
     email = EmailField('Email', [
