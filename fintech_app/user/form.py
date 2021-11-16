@@ -7,4 +7,15 @@ from wtforms import validators, StringField, PasswordField, TextAreaField, Selec
 # for validating a mobile no with otp, emailid
 from wtforms.fields.html5 import EmailField, IntegerRangeField, TelField
 
+class RegisterForm_user_temp(Form):
+    email = EmailField('Email', [
+        validators.required(),
+        validators.Length(max=80, message="please enter Indian mobile")],
+        description="Enter Email"
+        )
 
+    password = PasswordField('Password', [
+        validators.Required(),
+        validators.Length(min=8, max=60, message="password must contain at least 8 characters.")
+        ])
+    
