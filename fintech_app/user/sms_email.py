@@ -3,7 +3,7 @@
 # from flask.ext.mail import Message
 
 from flask import session, flash
-from meditate import app, mail
+from fintech_app import app, mail
 
 import random, datetime
 

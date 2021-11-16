@@ -6,7 +6,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 
 # The Flask-Mail extension provides a simple interface to set up SMTP with 
 # your Flask application and to send messages from your views and scripts.
-# from flask.ext.mail import Mail
+from flask.ext.mail import Mail
 
 # creating a instance of Flask as app
 app = Flask(__name__)
@@ -23,8 +23,8 @@ db = SQLAlchemy(app)
 # migrate = Migrate(app, db)
 
 # # for setting up mail
-# mail = Mail()
-# mail.init_app(app)
+mail = Mail()
+mail.init_app(app)
 
 
 # views are controller (which has to route) in flask in MVC Pattern

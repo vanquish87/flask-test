@@ -7,7 +7,7 @@ from fintech_app import db
 from user.models import User
 
 # for filling up the form & validating in html file, use login form for logging in
-from user.form import RegisterForm_user_temp, RegisterForm_user
+from user.form import RegisterForm_user_temp
 
 # for communications to user
 from user.sms_email import send_OTP_email

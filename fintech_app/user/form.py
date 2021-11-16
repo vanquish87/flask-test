@@ -12,7 +12,7 @@ from wtforms.fields.html5 import EmailField, IntegerRangeField, TelField
 
 class RegisterForm_user_temp(Form):
     email = EmailField('Email', [
-        validators.required(),
+        validators.Required(),
         validators.Length(max=80, message="please enter Indian mobile")],
         description="Enter Email"
         )
