@@ -23,6 +23,9 @@ SQLALCHEMY_TRACK_MODIFICATIONS = True
 # for sending sms via API http://10seconds.in/pricing/ contact Rahul +91 9899338847
 SEND_SMS = False
 
+# for sending email via SMTP servers
+SEND_EMAIL = False
+
 # if db created by migrations for 1st time
 MIGRATION = True
 
@@ -39,3 +42,16 @@ else:
     AUTH_TOKEN = "aa0fd13351a622ba1e3c2acac4ec348b"
     PRIV_SALT = "b7bbacc776c4876ec7d5de1f7118ce3b"
 # -------------------------------------------
+
+# mail settings
+MAIL_USE_SSL = False
+MAIL_USE_TLS = True
+MAIL_SERVER = 'smtp.zoho.com'
+MAIL_PORT = 587
+
+# zoho authentication
+MAIL_USERNAME = 'valueguyz-admin@valueguyz.com'
+MAIL_PASSWORD = 'code4ruby@feb14'
+
+# mail accounts
+MAIL_DEFAULT_SENDER = 'valueguyz-admin@valueguyz.com'

@@ -1,3 +1,5 @@
+# flask_wtf :Simple integration of Flask and WTForms, including CSRF, file upload and Recaptcha integration
+from flask_wtf import Form
 
 # When you have to work with form data submitted by a browser view code quickly becomes very hard to read.
 # There are libraries out there designed to make this process easier to manage.
