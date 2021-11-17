@@ -59,17 +59,15 @@
                 <!----CSRF Tag for hack prevention-->
                 {{ form.hidden_tag() }}
                     <!--Tags coming from form.py file(model) in user-->
-                    <fieldset disabled>
-                {{ render_field(form.fullname, class="form-control", value=session.get('fullname')) }}
-                {{ render_field(form.mobile, class="form-control", value=session.get('mobile_register')) }}
+                <fieldset disabled>
+                {{ render_field(form.email, class="form-control", placeholder="Dost what's your email?", maxlength="80") }}
                 </fieldset>
                 
                 {{ render_field(form.otp_verify, class="form-control", maxlength="6") }}
-                {{ render_field(form.password, class="form-control") }}
                 <div class="checkbox">
                     <span class="character-checkbox" onclick="showPassword()"></span>
                     <span class="label">Show password</span>
-                    <span class="label pull-right"><a href="{{ url_for('resend_OTP') }}">Resend OTP</a></span>
+                    <!-- <span class="label pull-right"><a href="{{ url_for('resend_OTP') }}">Resend OTP</a></span> -->
                 </div>
                 <!--recaptcha js from google-->
                 <!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
@@ -81,6 +79,7 @@
             {% endif %}
 
             <a href="{{ url_for('login') }}" class="forget">Sign In <i class="fa fa-sign-in" style="color:#34A853" title="New user register for FREE"></i></a>
+            <a href="{{ url_for('logout') }}" class="forget">Log Out</a>
             
             <hr>
               

@@ -22,3 +22,16 @@ class RegisterForm_user_temp(Form):
         validators.Length(min=8, max=60, message="password must contain at least 8 characters.")
         ])
     
+# creating a subclass of Form so that it inherits all the stuff
+class RegisterForm_user(Form):
+    email = EmailField('Email', [
+        validators.Required(),
+        validators.Length(max=80, message="please enter Indian mobile")],
+        description="Enter Email"
+        )
+        
+    otp_verify = TelField('OTP', [
+        validators.required(),
+        validators.Length(min=6, message="invalid OTP, try again.")]
+        )
+    

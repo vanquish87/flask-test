@@ -1,6 +1,6 @@
 # Let’s create a basic function for sending emails with a little help from Flask-Mail
 # which is already installed and setup in project/__init__.py.
-# from flask.ext.mail import Message
+from flask.ext.mail import Message
 
 from flask import session, flash
 from fintech_app import app, mail
