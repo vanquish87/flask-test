@@ -13,7 +13,7 @@ from user.form import RegisterForm_user_temp
 from user.sms_email import send_OTP_email
 
 # bcrypt password hashing and key derivation
-import bcrypt
+# import bcrypt
 
 
 def user_register():

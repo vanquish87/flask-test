@@ -1,7 +1,7 @@
 import os, sys
 
 # tells python the starting point of this project
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__name__), '..')))
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 # The Flask-Script extension provides support for writing external scripts in Flask.
 # This includes running a development server, a customised Python shell, scripts to set up your database,
