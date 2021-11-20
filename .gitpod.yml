@@ -18,9 +18,5 @@ tasks:
      
   - init: |
      mysql -e "create database website;"
-     source venv/bin/activate
-     python3 manage.py shell
-     from fintech_app import db
-     db.session.commit()
-     db.create_all()
 
+   #   i have to continue more on this
