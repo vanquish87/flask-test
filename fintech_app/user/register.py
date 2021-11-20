@@ -20,24 +20,25 @@ def user_register():
     # session.clear() 
     form = RegisterForm_user_temp()
     error = None
-    if session.get('email'):
-        return redirect(url_for('home'))
+    user = User.query.filter_by(email=form.email.data).first()
+    if user:
+        error = 'This email is already registered.'
     else:
-        if form.validate_on_submit():
-            #Check for unique email first & if not pass 'error' to html page
-            if form.email.data:
-                    session['email'] = form.email.data
-                    session['password'] = form.password.data
-                    # send OTP sms via api here
-                    send_OTP_email( session['email'])
-                    return redirect(url_for('register_full'))
-            else:
-                error = 'please enter valid email'
-            # user = User.query.filter_by(email=form.email.data).first()
-            # if user:
-            #     error = 'This email is already registered.'
-            # else:
-        return render_template('user/register.html', form=form, error=error, action='temp')
+        if session.get('email'):
+            return redirect(url_for('home'))
+        else:
+            if form.validate_on_submit():
+                #Check for unique email first & if not pass 'error' to html page
+                if form.email.data:
+                        session['email'] = form.email.data
+                        session['password'] = form.password.data
+                        # send OTP sms via api here
+                        send_OTP_email( session['email'])
+                        return redirect(url_for('register_full'))
+                else:
+                    error = 'please enter valid email'
+    
+    return render_template('user/register.html', form=form, error=error, action='temp')
 
 
 

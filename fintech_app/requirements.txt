@@ -1,6 +1,8 @@
 Flask==0.10.1
-PyMySQL==0.6.7
+# PyMySQL==0.6.7
+PyMySQL==1.0.2
 Flask-SQLAlchemy==2.1
+SQLAlchemy==1.0.8
 Flask-Script==2.0.5
 Flask-WTF==0.12
 WTForms==2.0.2
