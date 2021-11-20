@@ -16,7 +16,7 @@ tasks:
      source venv/bin/activate
      pip install -r requirements.txt
      
-  - init: |
-     mysql -e "create database website;"
+  # - init: |
+    #  mysql -e "create database website;"
 
    #   i have to continue more on this
