@@ -6,6 +6,8 @@ image:
   #  command: echo "Replace me with omething that should run on every start, or just
    #   remove me entirely."
 
+
+# these task is to create custom workspace with prebuild so that I don't have to code again n again..
 tasks:
   - init: |
      export PIP_USER=no
@@ -16,3 +18,9 @@ tasks:
      
   - init: |
      mysql -e "create database website;"
+     source venv/bin/activate
+     python3 manage.py shell
+     from fintech_app import db
+     db.session.commit()
+     db.create_all()
+
