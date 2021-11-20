@@ -8,13 +8,12 @@ image:
 
 tasks:
   - init: |
-  export PIP_USER=no
-  cd fintech_app/
-  virtualenv -p python3 venv
-  source venv/bin/activate
-  pip install -r requirements.txt
+     export PIP_USER=no
+     cd fintech_app/
+     virtualenv -p python3 venv
+     source venv/bin/activate
+     pip install -r requirements.txt
 
 tasks:
   - init: |
-  mysql -e "create database website;"
-  
+     mysql -e "create database website;"
